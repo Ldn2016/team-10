@@ -33,15 +33,14 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/total_beginning_children"
         android:background="@drawable/edit_text_border"
-        android:text="@string/add_number"
+        android:hint="@string/add_number"
         android:textSize="12dp"
         android:textColor="#666666"
         android:gravity="center_horizontal"
-        android:hint="username"
+        android:inputType = "number"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true" />
@@ -75,7 +74,8 @@
         android:layout_toRightOf="@+id/total_beginning_children"
         android:layout_toEndOf="@+id/total_beginning_children"
         android:layout_marginBottom="12dp"
-        android:id="@+id/button3" />
+        android:id="@+id/button3"
+        android:onClick="openNutritional2" />
 
 
 </RelativeLayout>
