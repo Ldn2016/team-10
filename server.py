@@ -27,7 +27,8 @@ class StringGenerator(object):
 	def getFile(self):
 		with open('Values.csv', 'r') as file:
 			return file.readlines()
-
+	
+	@cherrypy.expose
 	def deleteFile(self):
 		os.remove("Values.csv")
 		return 'File Removed'
