@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">SaveTheChildren</string>
-    <string name="nutrition_button">Nutrition Data</string>
-    <string name="stock_button">Stock</string>
-    <string name="graph_button">Graphs</string>
 </resources>
