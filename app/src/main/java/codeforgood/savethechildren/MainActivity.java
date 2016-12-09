@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public void openNutrition(View v) {
         Intent intent = new Intent(this.getApplicationContext(), NutritionalActivity1.class);
         startActivity(intent);
+
     }
 
     public void openStock(View v) {

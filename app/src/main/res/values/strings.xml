@@ -6,8 +6,8 @@
 
     <string name="add_number">Add a number here</string>
     <string name="next">Next ></string>
-    
-    
+
+
     <string name="new_treatment">New Treatment</string>
     <string name="treatment_group_options">Treatment Group</string>
     <string name="total_beginning">Total Beginning of Period</string>
@@ -26,5 +26,4 @@
     <string name="total_admissions">Total Admissions</string>
 
 
-    
 </resources>
