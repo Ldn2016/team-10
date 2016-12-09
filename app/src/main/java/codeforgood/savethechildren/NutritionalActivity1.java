@@ -11,7 +11,7 @@ public class NutritionalActivity1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nutritiona1l);
+        setContentView(R.layout.activity_nutritional1);
     }
 
     public void onClick(Void v) {
