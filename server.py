@@ -12,7 +12,7 @@ class StringGenerator(object):
 		<body>
 			<form method="get" action="writeFile">
 				<input type="text" value="" name="csv" />
-				<button type="submit">Enter number</button>
+				<button type="submit">Input attributes</button>
 			</form>
 			</body>
 		</html>"""
