@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".StockActivity" />
-        <activity android:name=".NutritionalActivity" />
+        <activity android:name=".NutritionalActivity1" />
         <activity android:name=".GraphActivity"></activity>
     </application>
 

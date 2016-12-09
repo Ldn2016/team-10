@@ -3,4 +3,28 @@
     <string name="stock_button">Stock</string>
     <string name="graph_button">Graph</string>
     <string name="nutrition_button">Nutrition</string>
+
+    <string name="add_number">Add a number here</string>
+    <string name="next">Next ></string>
+    
+    
+    <string name="new_treatment">New Treatment</string>
+    <string name="treatment_group_options">Treatment Group</string>
+    <string name="total_beginning">Total Beginning of Period</string>
+    <string-array name="nutritional1">
+        <item> &lt; 6 months</item>
+        <item>6 to 59 months</item>
+    </string-array>
+
+
+    <string name="new_admissions">New Admissions</string>
+    <string name="wfh_bmi">WFH/BMI</string>
+    <string name="muac">MUAC</string>
+    <string name="odema">Odema</string>
+    <string name="relapse">Relapse</string>
+    <string name="re_admission">Re-admission</string>
+    <string name="total_admissions">Total Admissions</string>
+
+
+    
 </resources>

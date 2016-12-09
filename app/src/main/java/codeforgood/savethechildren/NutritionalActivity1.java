@@ -3,11 +3,11 @@ package codeforgood.savethechildren;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class NutritionalActivity extends AppCompatActivity {
+public class NutritionalActivity1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nutritional);
+        setContentView(R.layout.activity_nutritiona1l);
     }
 }
