@@ -37,13 +37,14 @@ class StringGenerator(object):
 		return 'File Removed'
 
 		
-url = 'http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/'
-response = urllib2.urlopen(url)
-cr = csv.reader(response)
 
-for row in cr:
-	print row
 
 if __name__ == '__main__':
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
 	cherrypy.quickstart(StringGenerator())
+	url = 'http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/'
+	response = urllib2.urlopen(url)
+	cr = csv.reader(response)
+
+	for row in cr:
+		print row
