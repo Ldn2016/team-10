@@ -37,7 +37,7 @@ class StringGenerator(object):
 		return 'File Removed'
 
 		
-url = http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/
+url = 'http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/'
 response = urllib2.urlopen(url)
 cr = csv.reader(response)
 
