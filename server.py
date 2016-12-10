@@ -4,9 +4,11 @@ import os
 import cherrypy
 import csv
 
+array = []
+
 class StringGenerator(object):
 
-	array = []
+	
 
 	@cherrypy.expose
 	def index(self):
