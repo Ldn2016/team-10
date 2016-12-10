@@ -3,7 +3,8 @@ import string
 import os
 import cherrypy
 import csv
-import urllib, urllib2
+import urllib2
+array = []
 
 class StringGenerator(object):
 
@@ -35,9 +36,20 @@ class StringGenerator(object):
 		os.remove("Values.csv")
 		return 'File Removed'
 
-		#CSV_URL = 'http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile'
-	
-		
+	@cherrypy.expose
+	def createSpreadsheet():
+		cr = csv.reader(open('view-source:http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile',"rb"))
+		for row in cr:
+			array.append(row)
+
 if __name__ == '__main__':
+	print('111111111111111111111')
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
+	print('222222222222222222222')
 	cherrypy.quickstart(StringGenerator())
+	#cherrypy.tree.mount(StringGenerator())
+	#print('333333333333333333333')
+	#cherrypy.engine.start()
+	#print('444444444444444444444')
+	#createSpreadsheet()
+	#print('555555555555555555555')
