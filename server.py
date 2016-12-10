@@ -56,6 +56,8 @@ class GraphGenerator(StringGenerator):
 		
 
 if __name__ == '__main__':
+	print(765764746)
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
+	print(765764746)
 	cherrypy.quickstart(GraphGenerator())
 	
