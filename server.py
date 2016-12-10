@@ -27,7 +27,7 @@ class StringGenerator(object):
 	def writeFile(self, csv):
 		with open('Values.csv', 'a') as file:
 			file.write(csv + "\n")
-		return ''
+			print('Values.csv')
 
 	@cherrypy.expose	
 	def getFile(self):
