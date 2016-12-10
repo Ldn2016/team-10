@@ -41,14 +41,14 @@ class StringGenerator(object):
 		CSV_URL = 'http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile'
 		
 		with requests.Session() as s:
-		download = s.get(CSV_URL)
+			download = s.get(CSV_URL)
 		
-		decoded_content = download.content.decode('utf-8')
+			decoded_content = download.content.decode('utf-8')
 		
-		cr = csv.reader(decoded_content.splitlines(), delimiter = ',')
-		my_list = list(cr)
-		for row in my_list:
-			print(row)
+			cr = csv.reader(decoded_content.splitlines(), delimiter = ',')
+			my_list = list(cr)
+			for row in my_list:
+				print(row)
 		
 if __name__ == '__main__':
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
