@@ -4,7 +4,7 @@ import android.content.res.Resources;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.net.MalformedURLException;
+import java.io.Serializable;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -12,8 +12,7 @@ import java.net.URLConnection;
  * Created by david on 09/12/2016.
  */
 
-public class WeeklyReport
-{
+class WeeklyReport implements Serializable {
     //ageGroup is either 1 (<6 months) or 2 (6-59 months)
     private String ageGroup;
     private String totalChildrenAtBeginning;
@@ -35,16 +34,16 @@ public class WeeklyReport
     private String totalOut;
     private String totalChildrenAtEnd;
 
-    public WeeklyReport() {}
+    WeeklyReport() {}
 
-    public void setNutritional1(String ageGroup, String totalChildrenAtBeginning) {
+    void setNutritional1(String ageGroup, String totalChildrenAtBeginning) {
         this.ageGroup = ageGroup + ',';
         this.totalChildrenAtBeginning = totalChildrenAtBeginning +',';
     }
 
 
 
-    public void sendData() {
+    void sendData() {
         String urlString = Resources.getSystem().getString(R.string.websever);
         try {
             URL url = new URL(urlString);
@@ -59,10 +58,8 @@ public class WeeklyReport
             writer.write(toSend);
             writer.close();
 
-        } catch (MalformedURLException e) {
-            // Yeah this is really bad but hackathon
         } catch (IOException e) {
-            // Again really really bad
+            // Yeah this is really bad but hackathon
         }
     }
 }
