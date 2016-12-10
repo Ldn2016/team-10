@@ -48,7 +48,7 @@ class StringGenerator(object):
 	def requestInfo(self):
 		with urllib.request.urlopen('http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile') as response:
 			html = response.read()
-	return html
+		return html
 
 #class GraphGenerator(StringGenerator):
 #
