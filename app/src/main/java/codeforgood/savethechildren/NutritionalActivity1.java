@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class NutritionalActivity1 extends AppCompatActivity {
 
@@ -30,8 +29,6 @@ public class NutritionalActivity1 extends AppCompatActivity {
         intent.putExtra("report", report);
 
         startActivity(intent);
-        Toast.makeText(this, "Report sent!", Toast.LENGTH_SHORT).show();
         finish();
-
     }
 }
