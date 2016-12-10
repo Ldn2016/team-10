@@ -49,7 +49,7 @@ class StringGenerator(object):
 
 class GraphGenerator(StringGenerator):
 	
-	def makeBarChart(self, string_generator)
+	def makeBarChart(self, string_generator):
 	{
 		string_generator.getInfo(self)
 		infoArray = string_generator.array
