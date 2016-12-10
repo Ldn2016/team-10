@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:id="@+id/muac_no"
+        android:id="@+id/total_beginning"
         android:background="@drawable/edit_text_border"
         android:hint="@string/add_number"
         android:textSize="12sp"
@@ -69,12 +69,11 @@
         android:text="@string/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/nut_1_button"
+        android:onClick="openNutritional2"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/muac_no"
-        android:layout_toEndOf="@+id/muac_no"
-        android:layout_marginBottom="12sp"
-        android:id="@+id/button3"
-        android:onClick="openNutritional2" />
+        android:layout_toRightOf="@+id/from_sc"
+        android:layout_toEndOf="@+id/from_sc" />
 
 
 </RelativeLayout>

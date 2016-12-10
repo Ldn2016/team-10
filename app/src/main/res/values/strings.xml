@@ -21,7 +21,7 @@
     <string name="new_admissions">New Admissions</string>
     <string name="wfh_bmi">WFH/BMI</string>
     <string name="muac">MUAC</string>
-    <string name="odema">Odema</string>
+    <string name="odema">Oedema</string>
     <string name="relapse">Relapse</string>
     <string name="re_admission">Re-admission</string>
     <string name="total_admissions">Total Admissions</string>

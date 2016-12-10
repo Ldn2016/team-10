@@ -9,7 +9,6 @@ import android.widget.Spinner;
 
 public class NutritionalActivity1 extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,13 +20,13 @@ public class NutritionalActivity1 extends AppCompatActivity {
         Spinner spinner = (Spinner) findViewById(R.id.nut_1_spinner);
         String age = spinner.getSelectedItem().toString();
 
-        EditText EText = (EditText) findViewById(R.id.muac_no);
+        EditText EText = (EditText) findViewById(R.id.total_beginning);
         String children = EText.toString();
 
         report.setNutritional1(age, children);
 
         Intent intent = new Intent(this.getApplicationContext(), NutritionalActivity2.class);
-        intent.putExtra("WeeklyReport", report);
+        intent.putExtra("report", report);
 
         startActivity(intent);
 

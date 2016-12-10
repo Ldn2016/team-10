@@ -15,8 +15,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/muac_no"
-        android:layout_toEndOf="@+id/muac_no"
+        android:layout_toRightOf="@+id/other_no"
+        android:layout_toEndOf="@+id/other_no"
         android:layout_marginBottom="12sp"
         android:id="@+id/openNutritional4"
         android:onClick="openNutritional4" />
@@ -28,16 +28,16 @@
         android:id="@+id/other"
         android:textSize="14sp"
         android:layout_marginTop="64sp"
-        android:layout_below="@+id/from_sc_box"
+        android:layout_below="@+id/from_sc_no"
         android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:id="@+id/from_sc_box"
+        android:id="@+id/from_sc_no"
         android:background="@drawable/edit_text_border"
-        android:hint="@string/add_number"
+        android:text="0"
         android:textSize="12sp"
         android:textColor="#666666"
         android:gravity="center_horizontal"
@@ -54,23 +54,23 @@
         android:textSize="14sp"
         android:layout_marginTop="96sp"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/from_sc_box"
-        android:layout_alignEnd="@+id/from_sc_box" />
+        android:layout_alignRight="@+id/from_sc_no"
+        android:layout_alignEnd="@+id/from_sc_no" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:id="@+id/muac_no"
+        android:id="@+id/other_no"
         android:background="@drawable/edit_text_border"
-        android:hint="@string/other"
+        android:text="0"
         android:textSize="12sp"
         android:textColor="#666666"
         android:gravity="center_horizontal"
         android:inputType = "number"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/from_sc_box"
-        android:layout_alignStart="@+id/from_sc_box" />
+        android:layout_alignLeft="@+id/from_sc_no"
+        android:layout_alignStart="@+id/from_sc_no" />
 
 
 </RelativeLayout>
