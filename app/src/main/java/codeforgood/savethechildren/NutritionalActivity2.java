@@ -36,6 +36,7 @@ public class NutritionalActivity2 extends AppCompatActivity {
         intent.putExtra("report", report);
 
         startActivity(intent);
+        finish();
 
     }
 }

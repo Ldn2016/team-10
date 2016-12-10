@@ -27,5 +27,6 @@ public class NutritionalActivity3 extends AppCompatActivity {
         Intent intent = new Intent(this.getApplicationContext(), NutritionalActivity4.class);
         intent.putExtra("report", report);
         startActivity(intent);
+        finish();
     }
 }

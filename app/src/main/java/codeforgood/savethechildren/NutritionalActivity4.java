@@ -17,5 +17,6 @@ public class NutritionalActivity4 extends AppCompatActivity {
 
     void openNutritional5(View v) {
         report.sendReport();
+        finish();
     }
 }

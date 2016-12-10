@@ -1,7 +1,7 @@
 package codeforgood.savethechildren;
 
 import java.io.IOException;
-import java.io.OutputStreamWriter;
+import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -41,6 +41,7 @@ public class WeeklyReport implements Serializable
     void setNutritional1(String ageGroup, String totalChildrenAtBeginning)
     {
         this.ageGroup = ageGroup;
+        System.out.println("This:" + totalChildrenAtBeginning);
         this.totalChildrenAtBeginning = totalChildrenAtBeginning;
     }
 
@@ -100,34 +101,28 @@ public class WeeklyReport implements Serializable
             new Thread(new Runnable() {
                 public void run () {
                     try {
-                        String toSend = ageGroup + ',' + totalChildrenAtBeginning + ',' + bmiBelow + ',' + muacBelow + oedemaBelow
-                        + ',' + relapse + reAdmissions + ',' + totalAdmissions + ',' + movedFromOTP + ',' + otherG + ',' + totalIn
+                        String toSend = ageGroup + ',' + totalChildrenAtBeginning + ',' + bmiBelow + ',' + muacBelow + ',' + oedemaBelow
+                        + ',' + relapse + ',' + reAdmissions + ',' + totalAdmissions + ',' + movedFromOTP + ',' + otherG + ',' + totalIn
                         + ',' + promotedToOTP + ',' + recovered + ',' + death + ',' + defaulterUnconfirmed + ',' + defaulterConfirmed
                         + ',' + nonRecoveryMedicalReferral + ',' + nonRecoveryNonResponse + ',' + totalDischarges + ',' + otherO
                         + ',' + totalOut + ',' + totalChildrenAtEnd;
 
                         // Hotfix can't be bothered to fix as 4am so hard coded string
 
-                        URL url = new URL("http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/");
-                        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                        connection.setDoOutput(true);
-                        connection.setDoInput(true);
-                        connection.setRequestMethod("POST");
-                        connection.setRequestProperty("Content-Type", "text/plain");
-                        connection.setRequestProperty("charset", "utf-8");
-                        connection.setRequestProperty("Content-Length", Integer.toString(toSend.length()));
 
-                        System.out.println("test");
-                        OutputStreamWriter write = new OutputStreamWriter(connection.getOutputStream());
-                        write.write(toSend);
-                        System.out.println("written");
-                        write.flush();
-                        System.out.println("help");
-                        write.close();
-                        System.out.println("out");
-                        System.out.println(toSend);
+                        toSend = toSend.replaceAll("\\s+","");
+                        URL url = new URL("http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/writeFile?csv=" + toSend);
+
+
+                        HttpURLConnection getConnection = (HttpURLConnection) url.openConnection();
+                        getConnection.setDoInput(true);
+                        getConnection.setRequestMethod("GET");
+                        InputStreamReader reader = new InputStreamReader(getConnection.getInputStream());
+                        reader.close();
+
                         // Fantastic bit of code
                     } catch (IOException e) {
+                        e.printStackTrace();
                     // Yeah it's a hackathon so might as well
                 }
             }

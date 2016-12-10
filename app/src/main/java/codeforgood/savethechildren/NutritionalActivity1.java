@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class NutritionalActivity1 extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class NutritionalActivity1 extends AppCompatActivity {
         String age = spinner.getSelectedItem().toString();
 
         EditText EText = (EditText) findViewById(R.id.total_beginning);
-        String children = EText.toString();
+        String children = EText.getText().toString();
 
         report.setNutritional1(age, children);
 
@@ -29,6 +30,8 @@ public class NutritionalActivity1 extends AppCompatActivity {
         intent.putExtra("report", report);
 
         startActivity(intent);
+        Toast.makeText(this, "Report sent!", Toast.LENGTH_SHORT).show();
+        finish();
 
     }
 }
