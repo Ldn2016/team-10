@@ -6,7 +6,8 @@ import csv
 
 class StringGenerator(object):
 
-	global array = []
+	global array
+	self.array = []
 
 	@cherrypy.expose
 	def index(self):
