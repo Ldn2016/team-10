@@ -4,8 +4,8 @@ import os
 import cherrypy
 import csv
 import urllib2
-import plotly.plotly as py
-import plotly.graph_objs as go
+#import plotly.plotly as py
+#import plotly.graph_objs as go
 array = []
 
 class StringGenerator(object):
@@ -54,13 +54,4 @@ if __name__ == '__main__':
 	cherrypy.quickstart(StringGenerator())
 	infoArray = getInfo(self)
 	print(infoArray)
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
