@@ -6,6 +6,7 @@
 
     <string name="add_number">Add a number here</string>
     <string name="next">Next ></string>
+    <string name="websever">http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/</string>
 
 
     <string name="new_treatment">New Treatment</string>
