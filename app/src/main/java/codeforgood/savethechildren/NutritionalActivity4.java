@@ -15,6 +15,7 @@ public class NutritionalActivity4 extends AppCompatActivity {
         setContentView(R.layout.activity_nutritional4);
         report = (WeeklyReport) getIntent().getSerializableExtra("report");
         setTitle("");
+
     }
 
 

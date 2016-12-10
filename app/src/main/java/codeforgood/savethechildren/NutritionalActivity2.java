@@ -15,6 +15,8 @@ public class NutritionalActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutritional2);
         report = (WeeklyReport) getIntent().getSerializableExtra("report");
+        setTitle("");
+
     }
 
     public void openNutritional3(View v) {
