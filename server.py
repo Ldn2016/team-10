@@ -47,10 +47,13 @@ class StringGenerator(object):
 		return array
 
 class GraphGenerator(StringGenerator):
-	
-	def makeBarChart(self, string_generator):
+
+	def __init__(self):
+		infoArray = StringGenerator.array
+		
+	def makeBarChart(self, infoArray):
 		string_generator.getInfo
-		infoArray = string_generator.array
+		print(infoArray)
 		
 		
 if __name__ == '__main__':
