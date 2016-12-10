@@ -47,7 +47,7 @@ class StringGenerator(object):
 				array.append(line)
 		return array
 
-class GraphGenerator(StringGenerator)
+class GraphGenerator(StringGenerator):
 	
 	def makeBarChart(self, string_generator)
 	{
