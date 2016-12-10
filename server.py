@@ -46,17 +46,17 @@ class StringGenerator(object):
 				array.append(line)
 		return array
 
-class GraphGenerator(StringGenerator):
-
-	def __init__(self):
-		infoArray = StringGenerator.array
-		
-	def makeBarChart(self, infoArray):
-		string_generator.getInfo
-		print(infoArray)
+#class GraphGenerator(StringGenerator):
+#
+#	def __init__(self):
+#		infoArray = StringGenerator.array
+#		
+#	def makeBarChart(self, infoArray):
+#		string_generator.getInfo
+#		print(infoArray)
 		
 		
 if __name__ == '__main__':
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
-	cherrypy.quickstart(GraphGenerator)
+	cherrypy.quickstart(StringGenerator)
 	
