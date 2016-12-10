@@ -4,6 +4,8 @@ import os
 import cherrypy
 import csv
 import urllib2
+import plotly.plotly as py
+import plotly.graph_objs as go
 array = []
 
 class StringGenerator(object):
@@ -41,18 +43,24 @@ class StringGenerator(object):
 		with open('Values.csv', 'r') as file:
 			for line in file:
 				array.append(line)
-		array.append('trevor is a bellend')
 		return array
-		#with open('Values.csv') as csvfile:
-		#	readCSV = csv.reader(csvfile, delimiter=',')
-		#	for row in readCSV:
-		#		return row
-#view-source:http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile',"rb"))
-		
+
+#class GraphGenerator()
+	
+#	def make
 
 if __name__ == '__main__':
-	print('111111111111111111111')
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
-	print('222222222222222222222')
-	
 	cherrypy.quickstart(StringGenerator())
+	infoArray = getInfo(self)
+	print(infoArray)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
