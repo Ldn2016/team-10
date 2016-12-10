@@ -9,8 +9,7 @@ import urllib2
 
 class StringGenerator(object):
 
-	def __init__(self):
-		self.array = []
+	array = []
 
 	@cherrypy.expose
 	def index(self):
