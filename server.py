@@ -3,7 +3,7 @@ import string
 import os
 import cherrypy
 import csv
-import urllib, urllib2
+#import urllib, urllib2
 import urllib.request
 
 class StringGenerator(object):
