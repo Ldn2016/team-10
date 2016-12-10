@@ -41,6 +41,7 @@ class StringGenerator(object):
 		with open('Values.csv', 'r') as file:
 			for line in file:
 				array.append(line)
+		array.append('trevor is a bellend')
 		return array
 		#with open('Values.csv') as csvfile:
 		#	readCSV = csv.reader(csvfile, delimiter=',')
