@@ -37,19 +37,17 @@ class StringGenerator(object):
 		return 'File Removed'
 
 	@cherrypy.expose
-	def createSpreadsheet():
-		cr = csv.reader(open('view-source:http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile',"rb"))
-		for row in cr:
-			array.append(row)
+	def getInfo():
+		with open('Values.csv') as csvfile:
+		readCSV = csv.reader(csvfile, delimiter=',')
+		for row in readCSV:
+			return row
+#view-source:http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile',"rb"))
+		
 
 if __name__ == '__main__':
 	print('111111111111111111111')
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
 	print('222222222222222222222')
+	
 	cherrypy.quickstart(StringGenerator())
-	#cherrypy.tree.mount(StringGenerator())
-	#print('333333333333333333333')
-	#cherrypy.engine.start()
-	#print('444444444444444444444')
-	#createSpreadsheet()
-	#print('555555555555555555555')
