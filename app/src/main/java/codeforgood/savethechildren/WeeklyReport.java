@@ -28,7 +28,7 @@ public class WeeklyReport
     private String totalDischarges;
     private String otherO;
     private String totalOut;
-    private String totalChildrenAtEnd;
+    private String totalChildrenAtEnd;   
 
     public WeeklyReport() {}
 
