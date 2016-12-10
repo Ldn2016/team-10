@@ -37,7 +37,7 @@ class StringGenerator(object):
 		return 'File Removed'
 
 	@cherrypy.expose
-	def getInfo():
+	def getInfo(self):
 		with open('Values.csv') as csvfile:
 			readCSV = csv.reader(csvfile, delimiter=',')
 			for row in readCSV:
