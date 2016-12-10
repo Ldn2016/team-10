@@ -49,15 +49,14 @@ class StringGenerator(object):
 class GraphGenerator(StringGenerator):
 	
 	def makeBarChart(self, string_generator):
+	print ('HELLO')
 		string_generator.getInfo(self)
 		infoArray = string_generator.array
-		print(infoArray)
+		
 	
 		
 
 if __name__ == '__main__':
-	print(765764746)
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
-	print(765764746)
 	cherrypy.quickstart(GraphGenerator())
 	
