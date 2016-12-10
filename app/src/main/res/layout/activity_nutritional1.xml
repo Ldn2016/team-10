@@ -8,10 +8,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    android:font="Roberto"
     tools:context="codeforgood.savethechildren.NutritionalActivity1">
 
     <TextView
         android:text="@string/new_treatment"
+        android:textColor="#000000"
         android:textSize="18pt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,6 +25,7 @@
 
     <TextView
         android:text="@string/total_beginning"
+        android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="194sp"
@@ -60,6 +64,7 @@
         android:text="@string/treatment_group_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:layout_above="@+id/nut_1_spinner"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="12sp"
