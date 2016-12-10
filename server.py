@@ -45,8 +45,11 @@ if __name__ == '__main__':
 	print('111111111111111111111')
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
 	print('222222222222222222222')
-	cherrypy.quickstart(StringGenerator())
+	#cherrypy.quickstart(StringGenerator())
+	cherrypy.tree.mount(StringGenerator())
 	print('333333333333333333333')
-	createSpreadsheet()
+	cherrypy.engine.start()
 	print('444444444444444444444')
+	createSpreadsheet()
+	print('555555555555555555555')
 	
