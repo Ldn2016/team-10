@@ -50,6 +50,6 @@ if __name__ == '__main__':
 	print('333333333333333333333')
 	cherrypy.engine.start()
 	print('444444444444444444444')
-	createSpreadsheet()
+	StringGenerator.createSpreadsheet()
 	print('555555555555555555555')
 	
