@@ -6,9 +6,11 @@ import csv
 import urllib2
 #import plotly.plotly as py
 #import plotly.graph_objs as go
-array = []
 
 class StringGenerator(object):
+
+	def __init__(self):
+		self.array = []
 
 	@cherrypy.expose
 	def index(self):
@@ -45,13 +47,17 @@ class StringGenerator(object):
 				array.append(line)
 		return array
 
-#class GraphGenerator()
+class GraphGenerator(StringGenerator)
 	
-#	def make
+	def makeBarChart(self, string_generator)
+	{
+		string_generator.getInfo
+		infoArray = string_generator.array
+		print(infoArray)
+	}	
+		
 
 if __name__ == '__main__':
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
-	cherrypy.quickstart(StringGenerator())
-	infoArray = getInfo(self)
-	print(infoArray)
+	cherrypy.quickstart(GraphGenerator())
 	
