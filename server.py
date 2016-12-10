@@ -35,7 +35,8 @@ class StringGenerator(object):
 	def deleteFile(self):
 		os.remove("Values.csv")
 		return 'File Removed'
-
+	
+	@cherrypy.expose
 	def createSpreadsheet():
 		cr = csv.reader(open('view-source:http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile',"rb"))
 		for row in cr:
