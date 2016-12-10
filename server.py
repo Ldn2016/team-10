@@ -38,10 +38,14 @@ class StringGenerator(object):
 
 	@cherrypy.expose
 	def getInfo(self):
-		with open('Values.csv') as csvfile:
-			readCSV = csv.reader(csvfile, delimiter=',')
-			for row in readCSV:
-				return row
+		with open('Values.csv', 'r') as file:
+			for line in file:
+				array.append(line)
+		return array
+		#with open('Values.csv') as csvfile:
+		#	readCSV = csv.reader(csvfile, delimiter=',')
+		#	for row in readCSV:
+		#		return row
 #view-source:http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile',"rb"))
 		
 
