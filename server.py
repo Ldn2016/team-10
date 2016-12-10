@@ -44,7 +44,7 @@ class StringGenerator(object):
 
 if __name__ == '__main__':
 	print('111111111111111111111')
-	cherrypy.config.update( {"server.socket_host": "0.0.0.1"} )
+	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
 	print('222222222222222222222')
 	cherrypy.quickstart(StringGenerator())
 	#cherrypy.tree.mount(StringGenerator())
