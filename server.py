@@ -36,7 +36,10 @@ class StringGenerator(object):
 		os.remove("Values.csv")
 		return 'File Removed'
 
-		
+	def createSpreadsheet():
+		cr = csv.reader(open('http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile',"rb"))
+		for row in cr:
+			print row
 
 
 if __name__ == '__main__':
