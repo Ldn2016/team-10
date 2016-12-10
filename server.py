@@ -49,7 +49,7 @@ class StringGenerator(object):
 class GraphGenerator(StringGenerator):
 	
 	def makeBarChart(self, string_generator):
-	print ('HELLO')
+		print('HELLO')
 		string_generator.getInfo(self)
 		infoArray = string_generator.array
 		
