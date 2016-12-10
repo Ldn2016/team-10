@@ -1,10 +1,12 @@
 package codeforgood.savethechildren;
 
+import java.io.Serializable;
+
 /**
  * Created by david on 09/12/2016.
  */
 
-public class WeeklyReport
+class WeeklyReport implements Serializable
 {
     //ageGroup is either 1 (<6 months) or 2 (6-59 months)
     private String ageGroup;
@@ -30,15 +32,15 @@ public class WeeklyReport
     private String totalOut;
     private String totalChildrenAtEnd;   
 
-    public WeeklyReport() {}
+    WeeklyReport() {}
 
-    public void setNutritional1(String ageGroup, String totalChildrenAtBeginning)
+    void setNutritional1(String ageGroup, String totalChildrenAtBeginning)
     {
         this.ageGroup = ageGroup;
         this.totalChildrenAtBeginning = totalChildrenAtBeginning;
     }
 
-    public void setNutritional2(String bmiBelow, String muacBelow, String oedemaBelow,
+    void setNutritional2(String bmiBelow, String muacBelow, String oedemaBelow,
                                 String relapse, String reAdmissions)
     {
         this.bmiBelow = bmiBelow;
@@ -52,7 +54,7 @@ public class WeeklyReport
         this.totalAdmissions = Integer.toString(totalAdmissionsInt);
     }
 
-    public void setNutritional3(String movedFromOTP, String otherG)
+    void setNutritional3(String movedFromOTP, String otherG)
     {
         this.movedFromOTP = movedFromOTP;
         this.otherG = otherG;
@@ -60,7 +62,7 @@ public class WeeklyReport
         this.totalIn = Integer.toString(totalInInt);
     }
 
-    public void setNutritional4(String promotedToOTP, String recovered, String death, String defaulterUnconfirmed,
+    void setNutritional4(String promotedToOTP, String recovered, String death, String defaulterUnconfirmed,
                                 String defaulterConfirmed, String nonRecoveryMedicalReferral,
                                 String nonRecoveryNonResponse)
     {
@@ -77,7 +79,7 @@ public class WeeklyReport
         this.totalDischarges = Integer.toString(totalDischargesInt);
     }
 
-    public void setNutritional5(String otherO)
+    void setNutritional5(String otherO)
     {
         this.otherO = otherO;
         this.totalOut = this.totalDischarges + otherO;

@@ -21,12 +21,21 @@ public class NutritionalActivity2 extends AppCompatActivity {
         Spinner spinner = (Spinner) findViewById(R.id.nut_1_spinner);
         String age = spinner.getSelectedItem().toString();
 
-        EditText EText = (EditText) findViewById(R.id.total_beginning_children);
-        String children = EText.toString();
+        EditText EText = (EditText) findViewById(R.id.wfh_bmi_no);
+        String bmiBelow = EText.toString();
+        EText = (EditText) findViewById(R.id.muac_no);
+        String muacNo = EText.toString();
+        EText = (EditText) findViewById(R.id.odema_no);
+        String odemaNo = EText.toString();
+        EText = (EditText) findViewById(R.id.relapse_no);
+        String relapseNo = EText.toString();
+        EText = (EditText) findViewById(R.id.re_admission_no);
+        String readmissionNo = EText.toString();
 
-        report.setNutritional1(age, children);
+        report.setNutritional2(bmiBelow, muacNo, odemaNo, relapseNo, readmissionNo);
 
         Intent intent = new Intent(this.getApplicationContext(), NutritionalActivity2.class);
+        startActivity(intent);
 
     }
 }

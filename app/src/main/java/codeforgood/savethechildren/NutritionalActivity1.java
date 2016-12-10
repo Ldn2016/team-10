@@ -21,7 +21,7 @@ public class NutritionalActivity1 extends AppCompatActivity {
         Spinner spinner = (Spinner) findViewById(R.id.nut_1_spinner);
         String age = spinner.getSelectedItem().toString();
 
-        EditText EText = (EditText) findViewById(R.id.other_box);
+        EditText EText = (EditText) findViewById(R.id.muac_no);
         String children = EText.toString();
 
         report.setNutritional1(age, children);
