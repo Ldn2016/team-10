@@ -3,9 +3,8 @@ import string
 import os
 import cherrypy
 import csv
-import urllib2
-#import plotly.plotly as py
-#import plotly.graph_objs as go
+import urllib, urllib2
+import urllib.request
 
 class StringGenerator(object):
 
@@ -45,6 +44,11 @@ class StringGenerator(object):
 			for line in file:
 				array.append(line)
 		return array
+		
+	def requestInfo(self):
+		with urllib.request.urlopen('http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile') as response:
+			html = response.read()
+	return html
 
 #class GraphGenerator(StringGenerator):
 #
@@ -59,4 +63,5 @@ class StringGenerator(object):
 if __name__ == '__main__':
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
 	cherrypy.quickstart(StringGenerator())
+	print(html + 'THISISATESTIWANTTHISTOPRINT!')
 	
