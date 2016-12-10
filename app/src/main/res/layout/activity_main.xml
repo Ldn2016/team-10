@@ -18,7 +18,10 @@
         android:id="@+id/button"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:onClick="openNutrition" />
+        android:onClick="openNutrition"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="#ff0000"
+        android:textColor="#ffffff" />
 
     <Button
         android:text="@string/stock_button"
@@ -29,7 +32,10 @@
         android:layout_below="@+id/button"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button"
-        android:onClick="openStock" />
+        android:onClick="openStock"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="#ff0000"
+        android:textColor="#ffffff" />
 
     <Button
         android:text="@string/graph_button"
@@ -40,5 +46,8 @@
         android:layout_below="@+id/button2"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2"
-        android:onClick="openGraph" />
+        android:onClick="openGraph"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="#ff0000"
+        android:textColor="#ffffff" />
 </RelativeLayout>
