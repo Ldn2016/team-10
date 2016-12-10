@@ -42,8 +42,11 @@ class StringGenerator(object):
 			print(row)
 
 if __name__ == '__main__':
-	print('TESTFUCKJGSUDIFOHSDUFHIOSDFHSID')
+	print('111111111111111111111')
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
+	print('222222222222222222222')
 	cherrypy.quickstart(StringGenerator())
+	print('333333333333333333333')
 	createSpreadsheet()
+	print('444444444444444444444')
 	
