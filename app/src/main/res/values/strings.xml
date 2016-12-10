@@ -6,7 +6,7 @@
 
     <string name="add_number">Add a number here</string>
     <string name="next">Next ></string>
-    <string name="websever">http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/</string>
+    <string name="websever">http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/writeFile?</string>
 
 
     <string name="new_treatment">New Treatment</string>
@@ -26,5 +26,8 @@
     <string name="re_admission">Re-admission</string>
     <string name="total_admissions">Total Admissions</string>
 
+
+    <string name="from_sc">Moved in from SC/OTP</string>
+    <string name="other">Other</string>
 
 </resources>

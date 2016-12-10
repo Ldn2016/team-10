@@ -21,12 +21,14 @@ public class NutritionalActivity1 extends AppCompatActivity {
         Spinner spinner = (Spinner) findViewById(R.id.nut_1_spinner);
         String age = spinner.getSelectedItem().toString();
 
-        EditText EText = (EditText) findViewById(R.id.total_beginning_children);
+        EditText EText = (EditText) findViewById(R.id.other_box);
         String children = EText.toString();
 
         report.setNutritional1(age, children);
 
         Intent intent = new Intent(this.getApplicationContext(), NutritionalActivity2.class);
+        intent.putExtra("WeeklyReport", report);
+
         startActivity(intent);
 
     }
