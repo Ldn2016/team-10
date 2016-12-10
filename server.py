@@ -4,7 +4,7 @@ import os
 import cherrypy
 import csv
 #import urllib, urllib2
-import urllib.request
+from urllib.request import urlopen
 
 class StringGenerator(object):
 
