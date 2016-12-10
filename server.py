@@ -39,9 +39,9 @@ class StringGenerator(object):
 	@cherrypy.expose
 	def getInfo():
 		with open('Values.csv') as csvfile:
-		readCSV = csv.reader(csvfile, delimiter=',')
-		for row in readCSV:
-			return row
+			readCSV = csv.reader(csvfile, delimiter=',')
+			for row in readCSV:
+				return row
 #view-source:http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile',"rb"))
 		
 
