@@ -4,11 +4,9 @@ import os
 import cherrypy
 import csv
 
-array = []
-
 class StringGenerator(object):
 
-	
+	global array = []
 
 	@cherrypy.expose
 	def index(self):
@@ -43,21 +41,10 @@ class StringGenerator(object):
 		with open('Values.csv', 'r') as file:
 			for line in file:
 				array.append(line)
-		return array
-
-#class GraphGenerator(StringGenerator):
-#
-#	def __init__(self):
-#		infoArray = StringGenerator.array
-#		
-#	def makeBarChart(self, infoArray):
-#		string_generator.getInfo
-#		print(infoArray)
-		
+		print(array)
 		
 if __name__ == '__main__':
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
-	print(array + 'THISISATESTIWANTTHISTOPRINT!')
 	cherrypy.quickstart(StringGenerator())
 	
 	
