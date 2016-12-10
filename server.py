@@ -39,7 +39,7 @@ class StringGenerator(object):
 	def getInfo():
 		with urllib.request.urlopen('http://ec2-52-212-183-253.eu-west-1.compute.amazonaws.com:8080/getFile') as response:
 			html = response.read()
-			
+			return html
 if __name__ == '__main__':
 	cherrypy.config.update( {"server.socket_host": "0.0.0.0"} )
 	cherrypy.quickstart(StringGenerator())
